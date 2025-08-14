@@ -10,6 +10,8 @@ const BlankLayout = Loadable(lazy(() => import('../components/layouts/blank/Blan
 
 /* ****Pages***** */
 const Home = Loadable(lazy(() => import('../pages/home/Home')))
+const Login = Loadable(lazy(() => import('../pages/login/Login')))
+const Dashboard = Loadable(lazy(() => import('../pages/dashboard/Dashboard')))
 
 export const router = createBrowserRouter([
   {
@@ -46,7 +48,7 @@ export const routerDev = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <EmptyPage description="Login Page in progress" />
+        element: <Login/>
       },
     ],
   },
@@ -59,8 +61,12 @@ export const routerDev = createBrowserRouter([
     ),
     children: [
       {
-        index: true, // default route under "/"
+        index: true,
         element: <Home />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
     ],
   },

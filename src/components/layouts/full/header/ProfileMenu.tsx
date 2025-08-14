@@ -48,7 +48,7 @@ const ProfileMenu: React.FC = () => {
           style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '120px' }}
           onClick={() => setMode('light')}
         >
-          <span>Light</span>
+          <span>{t('profile.light')}</span>
           {mode === 'light' && <CheckOutlined style={{ color: token.colorSuccess }} />}
         </div>
       ),
@@ -61,7 +61,7 @@ const ProfileMenu: React.FC = () => {
           style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '120px' }}
           onClick={() => setMode('dark')}
         >
-          <span>Dark</span>
+          <span>{t('profile.dark')}</span>
           {mode === 'dark' && <CheckOutlined style={{ color: token.colorSuccess }} />}
         </div>
       ),
@@ -127,12 +127,12 @@ const ProfileMenu: React.FC = () => {
     {
       key: 'add-account',
       icon: <UserOutlined />,
-      label: 'Add Account',
+      label: t('profile.addAcc'),
     },
     {
       key: 'manage-accounts',
       icon: <SettingOutlined />,
-      label: 'Manage Accounts',
+      label: t('profile.manageAcc'),
     },
   ];
 
@@ -189,7 +189,7 @@ const ProfileMenu: React.FC = () => {
           <span>{t('profile.appearance')}</span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
             <Text type="secondary" style={{ fontSize: '12px' }}>
-              {mode === 'system' ? t('profile.followSystem') : mode}
+              {mode === 'system' ? t('profile.followSystem') : mode === 'dark' ? t('profile.dark') : t('profile.light')}
             </Text>
           </div>
         </div>

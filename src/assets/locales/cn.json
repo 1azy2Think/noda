@@ -16,6 +16,10 @@
     "switchAccount": "换账号",
     "settings": "系统设定",
     "help": "帮助",
-    "logout": "退出账号"
+    "logout": "退出账号",
+    "addAcc": "增加账号",
+    "manageAcc": "管理账号",
+    "light" : "光",
+    "dark" : "暗"
   }
 }

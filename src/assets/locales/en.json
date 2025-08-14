@@ -16,6 +16,10 @@
     "switchAccount": "Switch Account",
     "settings": "Settings",
     "help": "Help Center",
-    "logout": "Log Out"
+    "logout": "Log Out",
+    "addAcc": "Add Account",
+    "manageAcc": "Manage Account",
+    "light" : "Light",
+    "dark" : "Dark"
   }
 }

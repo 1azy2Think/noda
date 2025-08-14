@@ -67,8 +67,8 @@ const FullLayout: React.FC<FullLayoutProps> = () => {
         <Content
           style={{
             margin: "0",
-            padding: "20px 20px",
-            maxWidth: "1200px",
+            padding: collapsed ? "20px 60px" : "20px 20px",
+            maxWidth: "calc(100vw)",
             minHeight: "calc(100vh - 170px)",
             // backgroundColor: token.colorBgContainer,
             backgroundColor: mode === 'dark' ? "#1f1f1f" : "#ffffff",
