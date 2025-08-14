@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "storage": "Storage",
+    "explore": "Explore",
+    "gpt": "GPT",
+    "myDocs": "My Document Library",
+    "folder": "Folder",
+    "doc": "Document"
+  },
+  "profile": {
+    "appearance": "Appearance",
+    "language": "Language",
+    "followSystem": "Follow System",
+    "switchAccount": "Switch Account",
+    "settings": "Settings",
+    "help": "Help Center",
+    "logout": "Log Out"
+  }
+}

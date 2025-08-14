@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "首页",
+    "dashboard": "仪表盘",
+    "storage": "存储",
+    "explore": "探索",
+    "gpt": "GPT助手",
+    "myDocs": "我的文档库",
+    "folder": "文件夹",
+    "doc": "文档"
+  },
+  "profile": {
+    "appearance": "模式",
+    "language": "语言",
+    "followSystem": "系统",
+    "switchAccount": "换账号",
+    "settings": "系统设定",
+    "help": "帮助",
+    "logout": "退出账号"
+  }
+}
