@@ -10,9 +10,14 @@ i18n
       en: { translation: en },
       zh: { translation: cn }
     },
-    lng: 'en', // default language
+    lng: localStorage.getItem("appLanguage") || "en",
     fallbackLng: 'en',
     interpolation: { escapeValue: false }
   });
+
+// Whenever language changes
+i18n.on("languageChanged", (lng) => {
+  localStorage.setItem("appLanguage", lng);
+});
 
 export default i18n;

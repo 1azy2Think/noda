@@ -1,9 +1,9 @@
-import { Button, Flex, Image, Layout, Typography, theme } from 'antd';
+import { Button, Flex, Layout, Typography, theme } from 'antd';
 import {
   MenuFoldOutlined,
 } from '@ant-design/icons';
-import logo from '../../../../assets/images/logo.png';
 import SidebarItems from './SidebarItems';
+import Logo from '../shared/logo/Logo';
 const { Sider } = Layout;
 const { Text } = Typography;
 const { useToken } = theme;
@@ -30,13 +30,22 @@ const Sidebar: React.FC<MSidebarProps> = ({ collapsed, onCollapse, hover, handle
           style={{
             backgroundColor: token.colorBgContainer,
             borderRight: `1px solid ${token.colorBorderSecondary}`,
+            overflow: 'auto',
+            height: '100vh',
+            position: 'sticky',
+            insetInlineStart: 0,
+            top: 0,
+            bottom: 0,
+            scrollbarWidth: 'thin',
+            scrollbarGutter: 'stable',
           }}
         >
           {/* Logo */}
           <Flex justify='space-between' align="center" style={{ padding: '16px', flexShrink: 0 }}>
 
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <Image src={logo} alt="logo" width={32} preview={false} />
+              {/* <Image src={logo} alt="logo" width={32} preview={false} /> */}
+              <Logo />
               <Text strong style={{ color: token.colorText }}>Noda</Text>
             </div>
             <Button

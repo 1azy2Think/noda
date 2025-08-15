@@ -1,0 +1,7 @@
+:root {
+  --full-screen-width: 100vw;
+  --full-screen-height: 100vh;
+
+  --header-height: 64px;
+  --content-margin: 16px
+}

@@ -12,6 +12,7 @@ const BlankLayout = Loadable(lazy(() => import('../components/layouts/blank/Blan
 const Home = Loadable(lazy(() => import('../pages/home/Home')))
 const Login = Loadable(lazy(() => import('../pages/login/Login')))
 const Dashboard = Loadable(lazy(() => import('../pages/dashboard/Dashboard')))
+const Storage = Loadable(lazy(() => import('../pages/storage/Storage')))
 
 export const router = createBrowserRouter([
   {
@@ -67,6 +68,10 @@ export const routerDev = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/storage",
+        element: <Storage />,
       },
     ],
   },

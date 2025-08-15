@@ -1,0 +1,8 @@
+/* Logo.css */
+.link-logo {
+  /* height: 70px;
+  width: 180px; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}

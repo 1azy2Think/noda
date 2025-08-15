@@ -31,7 +31,7 @@ const FullLayout: React.FC<FullLayoutProps> = () => {
   };
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout hasSider style={{ minHeight: "100vh" }}>
       {/* Sidebar */}
       <Sidebar
         collapsed={collapsed}
@@ -49,7 +49,7 @@ const FullLayout: React.FC<FullLayoutProps> = () => {
             padding: 0,
             position: "sticky",
             top: 0,
-            zIndex: 10,
+            zIndex: 100,
             // Remove manual background color - let theme handle it
             backgroundColor: token.colorBgContainer,
           }}
@@ -67,7 +67,8 @@ const FullLayout: React.FC<FullLayoutProps> = () => {
         <Content
           style={{
             margin: "0",
-            padding: collapsed ? "20px 60px" : "20px 20px",
+            // padding: collapsed ? "20px 60px" : "20px 20px",
+            padding: "0",
             maxWidth: "calc(100vw)",
             minHeight: "calc(100vh - 170px)",
             // backgroundColor: token.colorBgContainer,

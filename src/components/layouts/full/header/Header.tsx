@@ -7,6 +7,7 @@ import {
     AppstoreOutlined,
 } from "@ant-design/icons";
 import ProfileMenu from "./ProfileMenu";
+import { useLocation, Link } from "react-router";
 
 const { Header } = Layout;
 const { useToken } = theme;
@@ -14,15 +15,15 @@ const { useToken } = theme;
 interface AppHeaderProps {
     collapsed: boolean;
     toggleSidebar: () => void;
-    notes?: boolean;
     setHover: any;
     handleMouseEnter: () => void,
     handleMouseLeave: () => void,
 }
 
-const AppHeader: React.FC<AppHeaderProps> = ({ collapsed, toggleSidebar, setHover, handleMouseEnter, handleMouseLeave, notes }) => {
+const AppHeader: React.FC<AppHeaderProps> = ({ collapsed, toggleSidebar, setHover, handleMouseEnter, handleMouseLeave }) => {
     const { token } = useToken();
-    
+    const location = useLocation();
+
     return (
         <Header
             style={{
@@ -39,7 +40,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ collapsed, toggleSidebar, setHove
             <Space size="middle" align="center">
 
                 {collapsed &&
-                    < Row>
+                    <Row align="middle">
                         {/* Sidebar toggle */}
                         <Button
                             type="text"
@@ -52,14 +53,23 @@ const AppHeader: React.FC<AppHeaderProps> = ({ collapsed, toggleSidebar, setHove
                             onMouseLeave={handleMouseLeave}
                         />
 
-                        {/* Home icon only if in notes mode */}
-                        {notes && (
+                        {location.pathname !== "/dashboard" && (
+                            <Link to="/dashboard">
                             <Button
                                 type="text"
                                 icon={<HomeOutlined />}
                                 style={{ padding: 0 }}
                             />
+                            </Link>
                         )}
+
+                        {/* {notes && (
+                            <Button
+                                type="text"
+                                icon={<HomeOutlined />}
+                                style={{ padding: 0 }}
+                            />
+                        )} */}
 
                     </Row>
                 }

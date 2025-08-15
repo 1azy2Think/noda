@@ -4,6 +4,7 @@ import App from './App';
 import { ConfigProvider } from 'antd';
 import { ThemeProvider, useThemeMode } from './components/context/ThemeContext';
 import './i18n';
+import './assets/styles/global.css'
 
 // A small wrapper to inject algorithm into ConfigProvider
 function ThemedApp() {
